@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
+const {CLIENT_ORIGIN} = require('./config')
 const helmet = require('helmet')
 const { NODE_ENV } = require('./config')
 const app = express()
@@ -13,8 +14,8 @@ app.use(morgan(morganOption))
 app.use(helmet())
 app.use(cors())
 
-app.get('/', (req, res) => {
-    res.send('get in app js works')
+app.get('/api/*', (req, res) => {
+    res.send('get request in app js works')
 })
 
 app.use(function errorHandler(error, req, res, next) {
