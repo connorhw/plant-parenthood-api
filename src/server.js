@@ -1,15 +1,15 @@
-const express = require('express');
 const app = require('./app')
 const PORT = process.env.PORT || 3000;
 const cors = require('cors');
 const {CLIENT_ORIGIN} = require('./config');
+const knex = require('knex')
+const { DB_URL } = require('./config')
 
 const db = knex({
   client: 'pg',
   connection: DB_URL,
 })
 
-app.set('db', db)
 
 app.use(
     cors({
@@ -17,10 +17,12 @@ app.use(
     })
 );
 
+/*
 app.get('/api/*', (req, res) => {
   res.json({ok: true});
 });
+*/
+
+app.set('db', db)
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT} for plant-parenthood-api.`));
-
-module.exports = app;

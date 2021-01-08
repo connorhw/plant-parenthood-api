@@ -30,3 +30,5 @@ plantsRouter
           })
           .catch(next)
       })
+
+      module.exports = plantsRouter
