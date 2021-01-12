@@ -48,12 +48,12 @@ const PlantsService = {
       return {
         id: plant.id,
         plant_name: xss(plant.plant_name),
-        water_per_day: plant.water_per_day,
-        water_per_week: plant.water_per_week,
-        environment: plant.environment,
-        soil_fert: plant.soil_fert,
-        repot: plant.repot,
-        maintenance_level: plant.maintenance_level,
+        water_day: plant.water_day,
+        water_week: plant.water_week,
+        rec_env: plant.rec_env,
+        fert_type: plant.fert_type,
+        when_epot: plant.when_repot,
+        maint_level: plant.maint_level,
         fun_fact: plant.fun_fact,
         fav: plant.fav
       }

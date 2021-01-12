@@ -17,8 +17,8 @@ app.use(helmet())
 app.use(cors())
 
 app.use('/api/plants', plantsRouter)
-app.use('/api/favorites', favoritesRouter)
 //app.use('/api/favorites', favoritesRouter)
+
 /*
 app.get('/api/*', (req, res) => {
     console.log('The root path was called');

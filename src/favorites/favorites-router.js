@@ -1,7 +1,7 @@
 const express = require('express')
 const xss = require('xss')
 const plantsRouter = require('../plants/plants-router')
-const FavoritesService = require('./favorites-service')
+//const FavoritesService = require('./favorites-service')
 
 
 const FavoritesRouter = express.Router()
