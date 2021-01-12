@@ -1,4 +1,3 @@
-/*
 function requireAuth(req, res, next) {
     const authToken = req.get('Authorization') || ''
        let basicToken
@@ -32,4 +31,4 @@ function requireAuth(req, res, next) {
   module.exports = {
     requireAuth,
   }
-  */
+  

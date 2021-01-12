@@ -2,7 +2,7 @@ const path = require('path')
 const express = require('express')
 const xss = require('xss')
 const PlantsService = require('./plants-service')
-const { json } = require('express')
+//const { json } = require('express')
 
 const plantsRouter = express.Router()
 //const jsonParser = express.json()
@@ -31,4 +31,17 @@ plantsRouter
           .catch(next)
       })
 
-      module.exports = plantsRouter
+plantsRouter
+    .route('/:plant_id')
+    .all(requireAuth)
+    .all(checkPlantExists)
+    .get((req, res) => {
+      res.json(PlantsService.serializeArticle(res.plant))
+    })
+
+
+
+
+
+
+module.exports = plantsRouter

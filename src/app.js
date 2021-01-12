@@ -6,7 +6,7 @@ const {CLIENT_ORIGIN} = require('./config')
 const helmet = require('helmet')
 const { NODE_ENV } = require('./config')
 const plantsRouter = require('./plants/plants-router')
-//const favoritesRouter = require('./favorites/favorites-router')
+const favoritesRouter = require('./favorites/favorites-router')
 const app = express()
 const morganOption = (NODE_ENV === 'production')
   ? 'tiny'
@@ -17,6 +17,7 @@ app.use(helmet())
 app.use(cors())
 
 app.use('/api/plants', plantsRouter)
+app.use('/api/favorites', favoritesRouter)
 //app.use('/api/favorites', favoritesRouter)
 /*
 app.get('/api/*', (req, res) => {
