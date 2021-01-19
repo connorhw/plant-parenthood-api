@@ -32,7 +32,6 @@ plantsRouter
           })
           .catch(next)
       })
-      /* trying to implement create plant */
       .post(jsonParser, (req, res, next) => {
         const { plant_name, water_day, water_week, rec_env, fert_type, when_repot, maint_level, fun_fact, fav } = req.body
         const newPlant = { plant_name, water_day, water_week, rec_env, fert_type, when_repot, maint_level, fun_fact, fav }
@@ -54,18 +53,59 @@ plantsRouter
             })
             .catch(next)
     })
-/*
+
 plantsRouter
-    .route('plants/:plant_id')
+    .route('/:id')
     //.all(requireAuth)
-    .all(checkPlantExists)
-    .get((req, res) => {
-      res.json(PlantsService.serializeArticle(res.plant))
+    .all((req, res, next) => {
+      PlantsService.getById(
+        req.app.get('db'),
+        req.params.id
+      )
+        .then(plant => {
+          if(!plant) {
+            return res.status(404).json({
+              error: { message: `Plant doesn't exist` }
+            })
+          }
+          res.plant = plant
+          next()
+        })
+        .catch(next)
     })
+    .get((req, res, next) => {
+      res.json(serializePlant(res.plant))
+    })
+    .delete((req, res, next) => {
+      PlantsService.deletePlant(
+        req.app.get('db'),
+        req.params.id
+      )
+        .then(numRowsAffected => {
+          res.status(204).end()
+        })
+        .catch(next)
+    })
+    .patch(jsonParser, (req, res, next) => {
+      const { plant_name, water_day, water_week, rec_env, fert_type, when_repot, maint_level, fun_fact, fav } = req.body
+      const plantToUpdate = { plant_name, water_day, water_week, rec_env, fert_type, when_repot, maint_level, fun_fact, fav }
 
-*/
-
-
-
+      const numberOfValues = Object.values(plantToUpdate).filter(Boolean).length
+      if (numberOfValues === 0)
+        return res.status(400).json({
+          error: {
+            message: `Request body must contain a new value for at least one of the plant page values`
+          }
+        })
+      PlantsService.updatePlant(
+        req.app.get('db'),
+        req.params.id,
+        plantToUpdate
+      )
+        .then(numRowsAffected => {
+          res.status(204).end()
+        })
+        .catch(next)
+    })
 
 module.exports = plantsRouter

@@ -21,28 +21,19 @@ const PlantsService = {
           .then(rows => {
             return rows[0]
           })
-      },
-    /*
-      getById(knex, id) {
-        return knex
-          .from('blogful_comments')
-          .select('*')
-          .where('id', id)
-          .first()
-      },
-    
-      deleteComment(knex, id) {
-        return knex('blogful_comments')
+    },
+
+    deletePlant(knex, id) {
+      return knex('plants_table')
           .where({ id })
           .delete()
-      },
-    
-      updateComment(knex, id, newCommentFields) {
-        return knex('blogful_comments')
+    },
+    updatePlant(knex, id, newPlantFields) {
+      return knex('plants_table')
           .where({ id })
-          .update(newCommentFields)
-      },
-      */
+          .update(newPlantFields)
+    },
+
      serializePlant(plant) {
       //const { author } = article
       return {

@@ -1,0 +1,61 @@
+2021-01-15 11:03:11.702 PST [47707] FATAL:  lock file "postmaster.pid" already exists
+2021-01-15 11:03:11.702 PST [47707] HINT:  Is another postmaster (PID 47672) running in data directory "/usr/local/var/postgres"?
+2021-01-15 11:14:28.908 PST [47959] FATAL:  lock file "postmaster.pid" already exists
+2021-01-15 11:14:28.908 PST [47959] HINT:  Is another postmaster (PID 47672) running in data directory "/usr/local/var/postgres"?
+2021-01-15 11:15:46.692 PST [47992] FATAL:  lock file "postmaster.pid" already exists
+2021-01-15 11:15:46.692 PST [47992] HINT:  Is another postmaster (PID 47961) running in data directory "/usr/local/var/postgres"?
+2021-01-15 11:24:51.183 PST [48339] LOG:  starting PostgreSQL 13.1 on x86_64-apple-darwin20.1.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.27), 64-bit
+2021-01-15 11:24:51.184 PST [48339] LOG:  listening on IPv6 address "::1", port 5432
+2021-01-15 11:24:51.184 PST [48339] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-01-15 11:24:51.185 PST [48339] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-01-15 11:24:51.189 PST [48340] LOG:  database system was shut down at 2021-01-15 11:20:31 PST
+2021-01-15 11:24:51.192 PST [48339] LOG:  database system is ready to accept connections
+2021-01-15 11:25:15.776 PST [48348] FATAL:  role "postgres" does not exist
+2021-01-15 11:25:16.017 PST [48349] FATAL:  role "postgres" does not exist
+2021-01-15 11:25:17.883 PST [48350] FATAL:  role "postgres" does not exist
+2021-01-15 11:26:01.640 PST [48351] FATAL:  role "postgres" does not exist
+2021-01-15 11:26:02.658 PST [48352] FATAL:  role "postgres" does not exist
+2021-01-15 11:26:03.377 PST [48353] FATAL:  role "postgres" does not exist
+2021-01-15 11:26:04.100 PST [48354] FATAL:  role "postgres" does not exist
+2021-01-15 11:26:05.397 PST [48355] FATAL:  role "postgres" does not exist
+2021-01-15 11:26:06.764 PST [48356] FATAL:  role "postgres" does not exist
+2021-01-15 11:26:07.626 PST [48357] FATAL:  role "postgres" does not exist
+2021-01-15 11:26:40.940 PST [48361] FATAL:  role "postgres" does not exist
+2021-01-15 11:26:41.533 PST [48362] FATAL:  role "postgres" does not exist
+2021-01-15 11:26:41.834 PST [48363] FATAL:  role "postgres" does not exist
+2021-01-15 11:26:50.953 PST [48365] FATAL:  role "postgres" does not exist
+2021-01-15 11:26:59.747 PST [48370] FATAL:  role "postgres" does not exist
+2021-01-15 11:27:27.638 PST [48377] FATAL:  role "postgres" does not exist
+2021-01-15 11:27:31.934 PST [48378] FATAL:  role "postgres" does not exist
+2021-01-15 11:35:26.861 PST [48339] LOG:  received fast shutdown request
+2021-01-15 11:35:26.861 PST [48339] LOG:  aborting any active transactions
+2021-01-15 11:35:26.862 PST [48339] LOG:  background worker "logical replication launcher" (PID 48346) exited with exit code 1
+2021-01-15 11:35:26.863 PST [48341] LOG:  shutting down
+2021-01-15 11:35:26.868 PST [48339] LOG:  database system is shut down
+2021-01-15 12:07:52.170 PST [48474] LOG:  starting PostgreSQL 13.1 on x86_64-apple-darwin20.1.0, compiled by Apple clang version 12.0.0 (clang-1200.0.32.27), 64-bit
+2021-01-15 12:07:52.171 PST [48474] LOG:  listening on IPv6 address "::1", port 5432
+2021-01-15 12:07:52.171 PST [48474] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-01-15 12:07:52.172 PST [48474] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2021-01-15 12:07:52.178 PST [48475] LOG:  database system was shut down at 2021-01-15 11:35:26 PST
+2021-01-15 12:07:52.182 PST [48474] LOG:  database system is ready to accept connections
+2021-01-15 12:08:04.567 PST [48482] FATAL:  role "postgres" does not exist
+2021-01-15 12:08:38.906 PST [48483] FATAL:  role "postgres" does not exist
+2021-01-15 12:08:44.518 PST [48484] FATAL:  role "postgres" does not exist
+2021-01-15 12:08:54.449 PST [48488] FATAL:  role "postgres" does not exist
+2021-01-15 12:09:39.480 PST [48493] FATAL:  role "postgres" does not exist
+2021-01-15 12:09:43.857 PST [48494] FATAL:  role "postgres" does not exist
+2021-01-15 12:10:01.689 PST [48495] FATAL:  role "postgres" does not exist
+2021-01-15 12:11:28.408 PST [48518] FATAL:  role "postgres" does not exist
+2021-01-15 12:11:46.348 PST [48519] FATAL:  role "postgres" does not exist
+2021-01-15 12:11:59.150 PST [48520] FATAL:  role "postgres" does not exist
+2021-01-15 12:12:31.022 PST [48538] FATAL:  role "postgres" does not exist
+2021-01-15 12:12:55.693 PST [48545] FATAL:  role "postgres" does not exist
+2021-01-15 12:15:27.696 PST [48555] FATAL:  role "postgres" does not exist
+2021-01-15 12:16:33.283 PST [48556] FATAL:  role "postgres" does not exist
+2021-01-15 12:17:07.536 PST [48557] FATAL:  role "postgres" does not exist
+2021-01-15 12:17:20.298 PST [48562] FATAL:  role "postgres" does not exist
+2021-01-15 12:20:01.016 PST [48474] LOG:  received fast shutdown request
+2021-01-15 12:20:01.017 PST [48474] LOG:  aborting any active transactions
+2021-01-15 12:20:01.018 PST [48474] LOG:  background worker "logical replication launcher" (PID 48481) exited with exit code 1
+2021-01-15 12:20:01.019 PST [48476] LOG:  shutting down
+2021-01-15 12:20:01.025 PST [48474] LOG:  database system is shut down
