@@ -43,7 +43,7 @@ const PlantsService = {
         water_week: plant.water_week,
         rec_env: plant.rec_env,
         fert_type: plant.fert_type,
-        when_epot: plant.when_repot,
+        when_repot: plant.when_repot,
         maint_level: plant.maint_level,
         fun_fact: plant.fun_fact,
         fav: plant.fav
