@@ -27,7 +27,6 @@ plantsRouter
         const knexInstance = req.app.get('db')
         PlantsService.getAllPlants(knexInstance)
           .then(plants => {
-            console.log(serializePlants)
             res.json(plants.map(serializePlants))
           })
           .catch(next)
