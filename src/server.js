@@ -9,7 +9,6 @@ const db = knex({
   client: 'pg',
   connection: DB_URL,
 })
-//app.use(cors())
 
 app.use(
     cors({
@@ -17,10 +16,11 @@ app.use(
     })
 );
 
+/*
 app.get('/api/*', (req, res) => {
   res.json({ok: true});
 });
-
+*/
 
 app.set('db', db)
 
