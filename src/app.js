@@ -4,7 +4,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 //const {CLIENT_ORIGIN} = require('./config')
 const helmet = require('helmet')
-const { NODE_ENV } = require('./config')
+//const NODE_ENV = require('./config')
 const plantsRouter = require('./plants/plants-router')
 //const favoritesRouter = require('./favorites/favorites-router')
 const app = express()
@@ -17,6 +17,19 @@ app.use(helmet())
 
 app.use('/api/plants', plantsRouter)
 
+app.use((error, req, res, next) => {
+  let response
+  if (process.env.NODE_ENV === 'production') {
+    response = { error: { message: 'server error' }}
+  } else {
+    response = { error }
+  }
+  res.status(500).json(response)
+})
+
+const PORT = process.env.PORT || 8000
+
+/*
 app.use(function errorHandler(error, req, res, next) {
    let response
    if (process.env.NODE_ENV === 'production') {
@@ -26,5 +39,5 @@ app.use(function errorHandler(error, req, res, next) {
    }
    res.status(500).json(response)
  })
-
+*/
 module.exports = app
